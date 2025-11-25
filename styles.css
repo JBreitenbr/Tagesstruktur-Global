@@ -35,6 +35,10 @@ body {
   padding: 1.5rem;
 }
 
+a {
+  margin: 3px;
+}
+
 .page {
   width: 100%;
   max-width: 780px;
