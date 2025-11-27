@@ -14,6 +14,10 @@
       max-width: 90vw;
       max-height: 80vh;
     }
+
+    #world {
+       text-align: center;
+    }
    
     #worldmap {
        border: 1px solid black;
