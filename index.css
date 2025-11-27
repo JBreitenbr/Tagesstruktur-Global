@@ -14,3 +14,8 @@
       max-width: 90vw;
       max-height: 80vh;
     }
+   
+    #worldmap {
+       border: 1px solid black;
+    }
+  
