@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Mosaic</title> 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
     <link rel="shortcut icon" href="Africa.ico">
-    <!--<link rel="stylesheet" href="styles.css" />-->
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
   <header>
@@ -28,6 +29,11 @@
   <a href="usa.html">Portland</a>
   </nav>   
   </header>  
-    <h2>Hier gibt es bald eine Weltkarte</h2>
+  <main>
+    <h5>Hier gibt es bald eine Weltkarte</h5>
+  <svg id="worldmap" width="380" height="400">
+  </svg>
+  </main>
+  <script src="script.js"></script>
   </body>
 </html>
