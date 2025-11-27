@@ -2,9 +2,9 @@
       margin: 0;
       padding: 0;
       background: #f7f3e8; /* sanft sandig */
-      display: flex;
+     /* display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;*/
       height: 100vh;
       font-family: system-ui, sans-serif;
     }
