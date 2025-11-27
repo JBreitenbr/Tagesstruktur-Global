@@ -4,7 +4,7 @@
       background: #f7f3e8; /* sanft sandig */
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 100vh;
       font-family: system-ui, sans-serif;
