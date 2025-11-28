@@ -16,7 +16,7 @@
   opacity:0.9;
   padding: 0.8rem;
   border-radius: 1.2rem;
-
+  transform: translate(0,-50px);
   visibility: hidden;
 
 }
