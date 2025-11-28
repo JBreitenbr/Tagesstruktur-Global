@@ -9,7 +9,17 @@
       height: 100vh;
       font-family: system-ui, sans-serif;
     }
+#tooltip {
+  background-color:cornflowerblue;
+  position: absolute;
+  font-size:0.8rem;
+  opacity:0.9;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
 
+  visibility: hidden;
+
+}
    main {
       display:flex;
       flex-direction:column;
