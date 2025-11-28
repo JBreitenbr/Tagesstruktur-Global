@@ -1,7 +1,7 @@
    const svg = d3.select("#worldmap");
     const width = +svg.attr("width");
     const height = +svg.attr("height");
-
+    let toolTip=d3.select("#tooltip");
     // Projektion (kannst du später beliebig ändern)
     const projection = d3.geoNaturalEarth1()
       .translate([width / 2.55, height / 3])
@@ -35,8 +35,11 @@ let arr=
           .attr("d", path)
           .attr("fill", "#d9c9a3")   // sandiges Land
           .attr("stroke", "#333") // dezente Grenzen
-          .attr("stroke-width", 0.5);
-        svg.selectAll("circle").data(arr).enter().append("circle").attr("cx",(item)=>projection([item["lon"],item["lat"]])[0]).attr("cy",(item)=>projection([item["lon"],item["lat"]])[1]).attr("r",2).attr("fill","#714342").attr("stroke","#000").attr("opacity",0.7).attr("stroke-width",0.5);
+          .attr("stroke-width", 0.5);   
+      let mouseover=(d,i)=>{
+     toolTip.style("visibility","visible").html("Land: "+i["country"]+"<br>"+"Stadt: "+i["city"]+"<br>"+"Einwohner: "+i["population"]);
+      }
+        svg.selectAll("circle").data(arr).enter().append("circle").attr("cx",(item)=>projection([item["lon"],item["lat"]])[0]).attr("cy",(item)=>projection([item["lon"],item["lat"]])[1]).attr("r",2).attr("fill","#714342").attr("stroke","#000").attr("opacity",0.7).attr("stroke-width",0.5).on("mouseover",mouseover).on("mouseleave",()=>{toolTip.style("visibility","hidden")});
       })
       .catch(err => {
         console.error("Fehler beim Laden der Weltkarte:", err);
